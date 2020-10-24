@@ -26,13 +26,13 @@ def weatherreport(City):
         print("\n" + City.capitalize())
         
         #print(f"Temperature: {temperature}")
-        ASpeak.speak(f"Temperature: {temperature}")
+        ASpeak.speak(f"Temperature: {temperature} degree Celcius")
 
         #print(f"Humidity: {humidity}")
-        ASpeak.speak((f"Humidity: {humidity}"))
+        ASpeak.speak((f"Humidity: {humidity}%"))
 
         #print(f"Pressure: {pressure}")
-        ASpeak.speak(f"Pressure: {pressure}")
+        ASpeak.speak(f"Atmospheric Pressure: {pressure} hecto Pascals")
 
         #print(f"Weather : {report[0]['description']}")
         ASpeak.speak(f"Weather : {report[0]['description']}")

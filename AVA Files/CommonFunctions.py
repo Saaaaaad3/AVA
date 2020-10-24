@@ -5,25 +5,12 @@ import pyautogui
 import time
 from urllib.request import urlopen
 from bs4 import BeautifulSoup as soup
+import CommandInput as CInput
 
 speak = ASpeak.speak
 
-"""
-def openreddit(Vinput):
-    try:
-        #reg_ex = re.search('open reddit (.*)', Vinput)
-        url = 'https://www.reddit.com/r/'
-        
-        if reg_ex:
-            subreddit = reg_ex.group(1).replace(" ", "")
-            url = url + 'r/' + subreddit
-            webbrowser.open(url)
-            print("Subreddit opened")
 
-    except Exception as e:
-        print(e)
-        speak("Something Went wrong.")
-"""
+chrome_path = "C:\Program Files (x86)\Google\Chrome\Application"
 
 def takescreenshot():
     #Saves Screen shot with the system's current Date and time
@@ -31,7 +18,8 @@ def takescreenshot():
         myscreenshot = pyautogui.screenshot()
         filename = (time.strftime("%d-%m-%Y--%H.%M.%S") + ".png")
         myscreenshot.save("C:\\Users\\dell\\Pictures\\Screenshots\\" + filename)
-                    
+        speak("ScreenShot Saved")
+
     except Exception as e:
         speak("Something went wrong")
         print(e)
@@ -55,3 +43,19 @@ def shownews():
 
     except Exception as e:
         print(e)
+
+def searchnet(command):
+    try:
+        webbrowser.open_new_tab(command)
+    except Exception as e:
+        print("Something Went wrong")
+        print(e)
+
+        
+def instagram():
+    
+    try: 
+        webbrowser.open("https://www.instagram.com")
+    except Exception as e:
+        print(e)
+        print("Something went wrong")

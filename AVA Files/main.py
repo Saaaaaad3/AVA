@@ -44,7 +44,7 @@ if __name__ == '__main__':
             ################### Bug Solving ####################
             elif "make a note" in Vinput or "write this down" in Vinput or "remember this" in Vinput:
                 speak("What would you like me to remember ?")
-                note_text = CInput.get_command
+                note_text = CInput.get_command()
                 Notes.instantnote(note_text)
                 speak("I've made a not of that!")
 

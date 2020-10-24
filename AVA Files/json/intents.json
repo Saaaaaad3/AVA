@@ -17,69 +17,7 @@
         "Hi there, how can I help?"
       ]
     },
-    {
-      "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye"],
-      "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
-        "Bye! Come back again soon."
-      ]
-    },
-    {
-      "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
-    },
-    {
-      "tag": "items",
-      "patterns": [
-        "Which items do you have?",
-        "What kinds of items are there?",
-        "What do you sell?"
-      ],
-      "responses": [
-        "We sell coffee and tea",
-        "We have coffee and tea"
-      ]
-    },
-    {
-      "tag": "payments",
-      "patterns": [
-        "Do you take credit cards?",
-        "Do you accept Mastercard?",
-        "Can I pay with Paypal?",
-        "Are you cash only?"
-      ],
-      "responses": [
-        "We accept VISA, Mastercard and Paypal",
-        "We accept most major credit cards, and Paypal"
-      ]
-    },
-    {
-      "tag": "delivery",
-      "patterns": [
-        "How long does delivery take?",
-        "How long does shipping take?",
-        "When do I get my delivery?"
-      ],
-      "responses": [
-        "Delivery takes 2-4 days",
-        "Shipping takes 2-4 days"
-      ]
-    },
-    {
-      "tag": "funny",
-      "patterns": [
-        "Tell me a joke!",
-        "Tell me something funny!",
-        "Do you know a joke?"
-      ],
-      "responses": [
-        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-        "What did the buffalo say when his son left for college? Bison."
-      ]
-    },
+
     {
       "tag": "weather",
       "patterns":[
@@ -89,6 +27,167 @@
       ],
       "responses":[
         "weather"
+      ]
+    },
+    {
+      "tag": "news",
+      "patterns": [
+        "Tell me todays news",
+        "What is todays news",
+        "Show me todays news",
+        "What is going on in the world today ?"
+      ],
+      "responses": [
+        "news"
+      ]
+    },
+    {
+      "tag": "Calender Events",
+      "patterns": [
+        "what do i have on",
+        "am i busy on",
+        "do i have plans on",
+        "what events do i have"
+      ],
+      "responses": [
+        "events"
+      ]
+    },
+    {
+      "tag": "sendemail",
+      "patterns": [
+        "send a mail for me",
+        "write a mail",
+        "send mail",
+        "write a mail for me"
+      ],
+      "responses": [
+        "send mail"
+      ]
+    },
+    {
+      "tag": "screenshot",
+      "patterns": [
+        "take screenshot",
+        "screenshot this",
+        "Click a screenshot",
+        "take screen shot",
+        "screen shot",
+        "Click a Screen shot"
+      ],
+      "responses": [
+        "take screenshot"
+      ]
+    },
+    {
+      "tag": "translate",
+      "patterns": [
+        "translate a sentence",
+        "open the trasnlator",
+        "translate this"
+      ],
+      "responses": [
+        "translate"
+      ]
+    },
+    {
+      "tag": "net search",
+      "patterns": [
+        "search the internet",
+        "search for",
+        "search on internet",
+        "search the net"
+      ],
+      "responses": [
+        "net search"
+      ]
+    },
+    {
+      "tag": "shutdown",
+      "patterns": [
+        "shutdown system"
+      ],
+      "responses": [
+        "shutdownsystem"
+      ]
+    },
+    {
+      "tag": "restart",
+      "patterns": [
+        "Restart system"
+      ],
+      "responses": [
+        "restartsystem"
+      ]
+    },
+    {
+      "tag": "maps",
+      "patterns": [
+        "Search the maps",
+        "give me maps",
+        "show maps",
+        "Search on map"
+      ],
+      "responses": [
+        "search maps"
+      ]
+    },
+    {
+      "tag": "reddit",
+      "patterns": [
+        "show reddit",
+        "open reddit",
+        "search for reddit"
+      ],
+      "responses": [
+        "show reddit"
+      ]
+    },
+    {
+      "tag": "read selected",
+      "patterns": [
+        "read the selected",
+        "read selection",
+        "read selected text",
+        "read text"
+      ],
+      "responses": [
+        "read selected"
+      ]
+    },
+    {
+      "tag": "notes",
+      "patterns": [
+        "make a note",
+        "write this down",
+        "remember this",
+        "write a note"
+      ],
+      "responses": [
+        "make note"
+      ]
+    },
+    {
+      "tag": "google play console",
+      "patterns": [
+        "open my Google Console",
+        "open google play console",
+        "show me how my apps are doing on playstore",
+        "status of my google playstore apps"
+      ],
+      "responses": [
+        "googleplay console"
+      ]
+    },
+    {
+      "tag": "instagram",
+      "patterns": [
+        "open my instagram",
+        "login to my instagram",
+        "let me check my instagram"
+      ],
+      "responses": [
+        "instagram login"
       ]
     }
   ]

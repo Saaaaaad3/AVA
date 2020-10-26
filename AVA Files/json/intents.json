@@ -1,24 +1,6 @@
 {
   "intents": [
     {
-      "tag": "greeting",
-      "patterns": [
-        "Hi",
-        "Hey",
-        "How are you",
-        "Is anyone there?",
-        "Hello",
-        "Good day"
-      ],
-      "responses": [
-        "Hey :-)",
-        "Hello, thanks for visiting",
-        "Hi there, what can I do for you?",
-        "Hi there, how can I help?"
-      ]
-    },
-
-    {
       "tag": "weather",
       "patterns":[
         "what is the weather?",
@@ -64,7 +46,7 @@
         "write a mail for me"
       ],
       "responses": [
-        "send mail"
+        "mail"
       ]
     },
     {
@@ -78,7 +60,7 @@
         "Click a Screen shot"
       ],
       "responses": [
-        "take screenshot"
+        "screenshot"
       ]
     },
     {
@@ -101,7 +83,7 @@
         "search the net"
       ],
       "responses": [
-        "net search"
+        "search"
       ]
     },
     {
@@ -110,7 +92,7 @@
         "shutdown system"
       ],
       "responses": [
-        "shutdownsystem"
+        "shutdown"
       ]
     },
     {
@@ -119,7 +101,7 @@
         "Restart system"
       ],
       "responses": [
-        "restartsystem"
+        "restart"
       ]
     },
     {
@@ -131,7 +113,7 @@
         "Search on map"
       ],
       "responses": [
-        "search maps"
+        "maps"
       ]
     },
     {
@@ -142,7 +124,7 @@
         "search for reddit"
       ],
       "responses": [
-        "show reddit"
+        "reddit"
       ]
     },
     {
@@ -154,7 +136,7 @@
         "read text"
       ],
       "responses": [
-        "read selected"
+        "read"
       ]
     },
     {
@@ -166,7 +148,7 @@
         "write a note"
       ],
       "responses": [
-        "make note"
+        "note"
       ]
     },
     {
@@ -178,7 +160,7 @@
         "status of my google playstore apps"
       ],
       "responses": [
-        "googleplay console"
+        "console"
       ]
     },
     {
@@ -189,7 +171,7 @@
         "let me check my instagram"
       ],
       "responses": [
-        "instagram login"
+        "insta"
       ]
     },
     {
@@ -197,10 +179,11 @@
       "patterns": [
         "search on wikipedia",
         "make a wikipedia search",
-        "make a wikipedia search"
+        "make a wikipedia search",
+        "search the wiki"
       ],
       "responses": [
-        "wikipedia search"
+        "wiki"
       ]
     },
     {
@@ -214,6 +197,28 @@
       ],
       "responses": [
         "wolfram"
+      ]
+    },
+    {
+      "tag": "paste",
+      "patterns": [
+        "Paste",
+        "paste this",
+        "paste it",
+      ],
+      "responses": [
+        "paste"
+      ]
+    },
+    {
+      "tag": "copy",
+      "patterns": [
+        "Copy",
+        "copy it",
+        "copy this"
+      ],
+      "responses": [
+        "copy"
       ]
     }
   ]

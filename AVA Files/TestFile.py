@@ -16,6 +16,7 @@ import ModelIntegration as MIntegration
 import UserEmail
 import Notes
 import wolframalphafile as WRFile
+import EditorMode as EM
 
 speak = ASpeak.speak
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -30,10 +31,10 @@ if __name__ == '__main__':
         #sentence = SInput.VoiceCommand()
 
         if sentence.count(WAKE) > 0:
-            speak("Im Ready")
+            speak("Im ready")
             sentence = CInput.get_command()
             #sentence = SInput.VoiceCommand()
-            if "poweroff" in sentence or "power of" in sentence or "powerdown" in sentence or "power off" in sentence or "power down" in sentence:
+            if "poweroff" in sentence or "power of" in sentence or "powerdown" in sentence or "power off" in sentence or "power down" in sentence or "powerof" in sentence:
                 break
             
             botresponse = MIntegration.MLFunc(sentence)
@@ -52,7 +53,7 @@ if __name__ == '__main__':
                 else:
                     speak("I dont understand")
 
-            elif "send mail" in botresponse:
+            elif "mail" in botresponse:
                 try:
                     speak("Enter the Recipient")
                     to = str(input())
@@ -71,7 +72,7 @@ if __name__ == '__main__':
                     speak("An Error has occured")
 
             #########BUG########
-            elif "net search" in botresponse:
+            elif "search" in botresponse:
                 speak("What should I search for ?")
                 command = input()
                 #command = SInput.VoiceCommand()
@@ -80,13 +81,13 @@ if __name__ == '__main__':
             elif "news" in botresponse:
                 CF.shownews()
             
-            elif "take screenshot" in botresponse:
+            elif "screenshot" in botresponse:
                 CF.takescreenshot()
             
             elif "translate" in botresponse:
                 Gtranslate.translatesentence()
 
-            elif "shutdownsystem" in botresponse:
+            elif "shutdown" in botresponse:
                 speak("Do you wish to shutdown the system ?")
                 command = CInput.get_command()
                 #command = SInput.VoiceCommand()
@@ -95,7 +96,7 @@ if __name__ == '__main__':
                 else:
                     pass
 
-            elif "restartsystem" in botresponse:
+            elif "restart" in botresponse:
                 speak("Do you wish to restart the system ?")
                 command = CInput.get_command()
                 #command = SInput.VoiceCommand()
@@ -103,21 +104,14 @@ if __name__ == '__main__':
                     os.system("shutdown /r /t 1")
                 else:
                     pass
-            
-            elif "makenote" in botresponse:
-                speak("What would you like me to remember ?")
-                note_text = CInput.get_command()
-                #note_text = SInput.VoiceCommand()
-                Notes.instantnote(note_text)
-                speak("I've made a not of that!")
 
-            elif "search maps" in botresponse:
+            elif "maps" in botresponse:
                 speak("Which place should i search for ?")
                 place = input()
                 #place = SInput.VoiceCommand()
                 webbrowser.open("https://www.google.com/maps/place/" + place)
 
-            elif "show reddit" in botresponse:
+            elif "reddit" in botresponse:
                 try: 
                     subreddit = input("Which subreddit ?")
                     #subreddit = SInput.VoiceCommand()
@@ -127,34 +121,42 @@ if __name__ == '__main__':
                 except Exception as e:
                     speak("Something Went wrong")
                     
-            elif "make note" in botresponse:
+            elif "note" in botresponse:
                 speak("What should i write down ?")
                 note_text = CInput.get_command()
                 #note_text = SInput.VoiceCommand()
                 Notes.instantnote(note_text)
                 speak("I've made a note of that")     
 
-            elif "googleplay console" in botresponse:
+            elif "console" in botresponse:
                 webbrowser.open_new_tab("https://play.google.com/console/u/0/developers/5469473923678169464/app-list")
-
-            elif "instagram login":
+            
+            elif "insta" in botresponse:
                 speak("Initializing")
                 CF.instagram()
-
-            elif "standby" in sentence:
+            
+            elif "standby" in botresponse:
                 break
-
-            elif "wikipedia search" in botresponse:
+            
+            elif "wiki" in botresponse:
                 speak("What do you want me to search on wikipedia ?")
                 wikisearch = CInput.get_command()
-
+                CF.wiki(wikisearch)
 
             elif "wolfram" in botresponse:
                 speak("Ask me")
                 wolframquery = CInput.get_command()
-                answer = WRFile(wolframquery)
-                speak(answer)
-                
+                WRFile.wolframfunc(wolframquery)
+            
+            elif "read" in botresponse:
+                EM.copydata()
+
+            elif "copy" in botresponse:
+                EM.copy()
+
+            elif "paste" in botresponse:
+                EM.paste()
+
             else:
                 print("I can't do that yet..")
                             

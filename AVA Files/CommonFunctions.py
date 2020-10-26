@@ -61,7 +61,13 @@ def instagram():
         print(e)
         print("Something went wrong")
 
-def wiki(command): 
-    result = wikipedia.summary(command, sentences = 5) 
-
-    speak(result)
+def wiki(command):
+    try:
+        result = wikipedia.summary(command, sentences = 5) 
+        speak(result)
+    except wiki.DisambiguationError as e:
+        if e :
+            speak("Please be more specific")
+        else:
+            speak("Something Went wrong")
+    

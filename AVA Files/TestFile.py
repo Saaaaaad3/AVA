@@ -15,6 +15,7 @@ import GoogleTranslate as Gtranslate
 import ModelIntegration as MIntegration
 import UserEmail
 import Notes
+import wolframalphafile as WRFile
 
 speak = ASpeak.speak
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -143,6 +144,17 @@ if __name__ == '__main__':
             elif "standby" in sentence:
                 break
 
+            elif "wikipedia search" in botresponse:
+                speak("What do you want me to search on wikipedia ?")
+                wikisearch = CInput.get_command()
+
+
+            elif "wolfram" in botresponse:
+                speak("Ask me")
+                wolframquery = CInput.get_command()
+                answer = WRFile(wolframquery)
+                speak(answer)
+                
             else:
                 print("I can't do that yet..")
                             

@@ -23,7 +23,9 @@
       "patterns":[
         "what is the weather?",
         "Tell me weather report",
-        "How's the weather?"
+        "How's the weather?",
+        "what is the temperature today ?",
+        "Temperature please"
       ],
       "responses":[
         "weather"
@@ -189,6 +191,30 @@
       "responses": [
         "instagram login"
       ]
+    },
+    {
+      "tag": "wikipedia",
+      "patterns": [
+        "search on wikipedia",
+        "make a wikipedia search",
+        "make a wikipedia search"
+      ],
+      "responses": [
+        "wikipedia search"
+      ]
+    },
+    {
+      "tag": "wolframalpha",
+      "patterns": [
+        "answer my question",
+        "answer this",
+        "can you answer a question ?",
+        "i have a math question",
+        "answer a question"
+      ],
+      "responses": [
+        "wolfram"
+      ]
     }
   ]
-}
+} 

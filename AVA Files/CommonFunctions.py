@@ -1,3 +1,4 @@
+import wikipedia
 import re
 import webbrowser
 import AssistantSpeak as ASpeak
@@ -59,3 +60,8 @@ def instagram():
     except Exception as e:
         print(e)
         print("Something went wrong")
+
+def wiki(command): 
+    result = wikipedia.summary(command, sentences = 5) 
+
+    speak(result)

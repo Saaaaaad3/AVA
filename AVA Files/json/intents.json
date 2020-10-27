@@ -177,7 +177,7 @@
     {
       "tag": "wikipedia",
       "patterns": [
-        "search on wikipedia",
+        "search the wikipedia",
         "make a wikipedia search",
         "make a wikipedia search",
         "search the wiki"
@@ -204,7 +204,7 @@
       "patterns": [
         "Paste",
         "paste this",
-        "paste it",
+        "paste it"
       ],
       "responses": [
         "paste"
@@ -219,6 +219,43 @@
       ],
       "responses": [
         "copy"
+      ]
+    },
+    {
+      "tag": "standby",
+      "patterns": [
+        "stop listening",
+        "standby",
+        "take a break"
+      ],
+      "responses": [
+        "standby"
+      ]
+    },
+    {
+      "tag": "currenttime",
+      "patterns": [
+        "what is the time",
+        "current time",
+        "time right now",
+        "the time",
+        "what time is it",
+        "what's the time"
+      ],
+      "responses": [
+        "time"
+      ]
+    },
+    {
+      "tag": "day",
+      "patterns": [
+        "todays date",
+        "what is the date today",
+        "what day is it ?",
+        "what is today ?"
+      ],
+      "responses": [
+        "date"
       ]
     }
   ]

@@ -17,6 +17,7 @@ import UserEmail
 import Notes
 import wolframalphafile as WRFile
 import EditorMode as EM
+import os
 
 speak = ASpeak.speak
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -38,8 +39,11 @@ if __name__ == '__main__':
                 break
             
             botresponse = MIntegration.MLFunc(sentence)
+            
+            if botresponse == None:
+                pass
 
-            if "weather" in botresponse:
+            elif "weather" in botresponse:
                 speak("Which City's weather report should I look for ?")
                 command = input()
                 #command = SInpuy.VoiceCommand()
@@ -157,6 +161,12 @@ if __name__ == '__main__':
             elif "paste" in botresponse:
                 EM.paste()
 
+            elif "time" in botresponse:
+                CF.timetoday()
+
+            elif "date" in botresponse:
+                CF.daytoday()
+
             else:
-                print("I can't do that yet..")
+                print("I dont understand you. Please be more specific")
                             

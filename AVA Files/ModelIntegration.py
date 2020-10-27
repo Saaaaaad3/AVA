@@ -40,6 +40,9 @@ def MLFunc(sentence):
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 botresponse = random.choice(intent['responses'])
+                if botresponse == None:
+                    speak("Either I cant listen you properly or that is out of my current knowledge")
+
                 return botresponse
                 break
     else:

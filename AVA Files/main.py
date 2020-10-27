@@ -105,7 +105,6 @@ if __name__ == '__main__':
             elif "translate" in Vinput:
                 Gtranslate.translatesentence()
 
-            
             elif "power off" in Vinput or "power down" in Vinput or 'powerdown' in Vinput or 'poweroff' in Vinput:
                 exit()
 

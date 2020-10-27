@@ -7,6 +7,14 @@ import time
 from urllib.request import urlopen
 from bs4 import BeautifulSoup as soup
 import CommandInput as CInput
+from datetime import datetime
+from datetime import date
+
+
+timestamp = 1528797322
+now = datetime.now()
+day_time = datetime.fromtimestamp(timestamp)
+
 
 speak = ASpeak.speak
 
@@ -71,3 +79,34 @@ def wiki(command):
         else:
             speak("Something Went wrong")
     
+def timetoday():
+    time = now.strftime("%I:%M %p")
+    speak("The time is " + time)
+
+def daytoday():
+    #day = day_time.strftime("%d %B")
+    day = date.today().strftime("%d %B")
+    dayofweek = now.weekday()
+    if dayofweek == 0:
+        dayofweek = ", Monday "
+        
+    elif dayofweek == 1:
+        dayofweek = ", Tuesday "
+        
+    elif dayofweek == 2:
+        dayofweek = ", Wednesday "
+        
+    elif dayofweek == 3:
+        dayofweek = ", Thursday "
+        
+    elif dayofweek == 4:
+        dayofweek = ", Friday "
+        
+    elif dayofweek == 5:
+        dayofweek = ", Saturday "
+        
+    elif dayofweek == 6:
+        dayofweek = ", Sunday "
+    
+    speak(day + dayofweek)
+        

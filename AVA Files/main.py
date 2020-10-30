@@ -13,24 +13,26 @@ import Weather
 import GoogleTranslate as Gtranslate
 import CommandInput as CInput
 import EditorMode as EM
+import SpeechInput as SInput
 
 
 speak = ASpeak.speak
 
 if __name__ == '__main__':
     # Wake Word
-    WAKE = 'hello'
+    WAKE = 'ava'
     SERVICE = Gcalender.authenticate_google()
     WishUser.wishuser()
 
     while True:
         print('Listening')
         # Change Vinput = VoiceCommand() to input voice commands
-        Vinput = CInput.get_command()
+        Vinput = SInput.VoiceCommand()
+        print(Vinput)
 
         if Vinput.count(WAKE) > 0:
             speak("I am Ready")
-            Vinput = CInput.get_command()
+            Vinput = SInput.VoiceCommand()
 
             #Shows how many and which events you have on a specific date(input)
             if "what do i have on" in Vinput or "do i have plans on" in Vinput or "am i busy on" in Vinput or "What events" in Vinput:

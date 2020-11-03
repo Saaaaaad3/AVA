@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import *
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt , QEvent
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QMovie
 from PyQt5.uic import loadUiType
@@ -15,6 +15,7 @@ class MainApp(QMainWindow, ui):
 
 
     def __init__(self):
+        super().__init__()
         QMainWindow.__init__(self)
         self.setupUi(self)
         self.setWindowFlag(Qt.FramelessWindowHint)  #Removes Title bar
@@ -23,6 +24,25 @@ class MainApp(QMainWindow, ui):
         self.Avagif()
         self.Handle_Buttons()
         self.Handle_Text()
+
+##### Title Bar Drag and Drop #####
+    def mousePressEvent(self, event):
+        if event.button() == QtCore.Qt.LeftButton:
+            self.offset = event.pos()
+        else:
+            super().mousePressEvent(event)
+
+    def mouseMoveEvent(self, event):
+        if self.offset is not None and event.buttons() == QtCore.Qt.LeftButton:
+            self.move(self.pos() + event.pos() - self.offset)
+        else:
+            super().mouseMoveEvent(event)
+
+    def mouseReleaseEvent(self, event):
+        self.offset = None
+        super().mouseReleaseEvent(event)
+#######
+
 
     def maximize_restore(self):
         global GLOBAL_STATE
@@ -34,7 +54,6 @@ class MainApp(QMainWindow, ui):
             GLOBAL_STATE = 0
             self.showNormal()
             #self.resize(self.width()+1, self.height()+1)
-
 
 
     def Avagif(self):

@@ -164,7 +164,7 @@
               <number>0</number>
              </property>
              <item>
-              <widget class="QPushButton" name="Homebtn_2">
+              <widget class="QPushButton" name="Homebtn">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -512,7 +512,7 @@ QPushButton:pressed{
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QPushButton" name="Minimize">
+                 <widget class="QPushButton" name="Minimizebtn">
                   <property name="minimumSize">
                    <size>
                     <width>19</width>

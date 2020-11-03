@@ -15,7 +15,6 @@ class MainApp(QMainWindow, ui):
 
 
     def __init__(self):
-        super().__init__()
         QMainWindow.__init__(self)
         self.setupUi(self)
         self.setWindowFlag(Qt.FramelessWindowHint)  #Removes Title bar
@@ -92,7 +91,7 @@ class MainApp(QMainWindow, ui):
 
     def onPressed(self):
         self.OutputTB.setText(self.lineEdit.text())
-
+        self.lineEdit.clear()
 
 
 

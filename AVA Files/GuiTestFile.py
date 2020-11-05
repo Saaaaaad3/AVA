@@ -3,7 +3,8 @@ from PyQt5.QtCore import Qt , QEvent
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QMovie
 from PyQt5.uic import loadUiType
-import sys      
+import sys
+import TestFile as TF      
 
 ui,_ = loadUiType('icons\\AVA.ui')
 
@@ -89,9 +90,11 @@ class MainApp(QMainWindow, ui):
         self.lineEdit.returnPressed.connect(self.onPressed)
 
 
+
     def onPressed(self):
-        self.OutputTB.setText(self.lineEdit.text())
+        self.OutputTB.setText(TF.ActualBot(self.lineEdit.text()))
         self.lineEdit.clear()
+
 
 
 
